@@ -1,0 +1,89 @@
+body{
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+header {
+    border-bottom: 1px solid #efefef;
+    background-color:rgba(255, 255, 255);
+    height:103px;
+    width:100%;
+    position:fixed;  
+    top: 0; /* Set the header to the top of the viewport */
+    left: 0;
+    z-index: 999   
+}
+
+.logo {
+    width: 200px; /* Adjust the width of the logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 20px; 
+    margin-top: 4px;/* Adjust the left margin to create space between the logo and other content */
+    display: flex;
+    align-items: center; /* Vertically align the image and other content */
+}
+
+header ul {
+    position:absolute;
+    right:5vw;
+    top:2vw;
+    line-height:80px;
+}
+header li {
+    display:inline;
+    margin-right:4vw;    
+}
+header a {
+    color:rgb(0, 0, 0);
+    text-decoration: none;
+}
+.about-link img {
+    margin-right: 10px; /* 在 img 右边添加 10px 的外边距 */
+}
+.product {
+ 
+    width: 335px;
+    margin-left: 30px;
+    margin-top: 200px;
+    text-align: center;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    filter: brightness(0%); /* Set initial brightness to 0% */
+    animation: showProduct 1s ease-in-out forwards; 
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product h2 {
+    font-size: 24px;
+    margin: 10px 0;
+    
+}
+
+.product p {
+    font-size: 18px;
+    color: #555;
+}
+@keyframes showProduct {
+    from {
+        filter: brightness(0%); /* Start with brightness at 0% (completely dark) */
+        margin-top: 300px; /* Start with a higher margin (below the viewport) */
+    }
+    to {
+        filter: brightness(100%); /* End with brightness at 100% (fully bright) */
+        margin-top: 200px; /* End with a lower margin (desired position) */
+    }
+}
+
+/* Add hover styles to lighten the product on hover */
+.product:hover {
+    transform: scale(0.95); /* Shrink the product on hover */
+    filter: brightness(100%); /* Make it 100% bright on hover */
+}
+
+
+
+
+

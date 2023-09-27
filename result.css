@@ -1,0 +1,133 @@
+body{
+    background-color: #ffffff;
+    overflow: hidden;
+}
+header {
+    border-bottom: 1px solid #efefef;
+    background-color:rgba(255, 255, 255);
+    height:103px;
+    width:100%;
+    position:fixed;  
+    top: 0; /* Set the header to the top of the viewport */
+    left: 0;
+    z-index: 999   
+}
+
+.logo {
+    width: 200px; /* Adjust the width of the logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 20px; 
+    margin-top: 4px;/* Adjust the left margin to create space between the logo and other content */
+    display: flex;
+    align-items: center; /* Vertically align the image and other content */
+}
+
+header ul {
+    position:absolute;
+    right:5vw;
+    top:2vw;
+    line-height:80px;
+}
+header li {
+    display:inline;
+    margin-right:4vw;    
+}
+header a {
+    color:rgb(0, 0, 0);
+    text-decoration: none;
+}
+.about-link img {
+    margin-right: 10px; /* 在 img 右边添加 10px 的外边距 */
+}
+.left-side {
+    float: left;
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.square {
+    margin-top: 90px;
+    width: 700px;
+    height: 600px;
+    background-color: #ffffff;
+    background-image: none;
+    background-size: cover;
+    border-radius: 10px;
+    border: 2px dashed #e9e9e9;
+    overflow: hidden;
+}
+.square img {
+    width: 100%; 
+}
+.right-side {
+    margin-top: 120px;
+    float: left;
+    width: 40%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.input-container {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    height: 30px;
+}
+
+input[type="text"], input[type="number"], select {
+    width: 100%;
+    padding: 15px;
+    border-radius: 100px;
+}
+.size-button {
+    width: 100px;
+    height: 45px;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000;
+    border-radius: 100px;
+    margin-left: 30px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.size-button.active {
+    background-color: #c8c8c8;
+    border-color: #000;
+}
+.fit-text {
+    margin-left: 55%;
+    font-weight: bold; /* 加粗字體 */
+    font-size: 5px; /* 文本大小 */
+    color: #888888;
+}
+
+.black-button {
+    width: 590px;
+    height: 45px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 100px; /* 圆角 */
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+select {
+    width: 105%;
+    padding: 15px;
+    border-radius: 100px;
+    height: 45px; /* 與其他欄位相同的高度 */
+}
+.input-container input[type="text"],
+.input-container input[type="number"],
+.input-container select {
+    text-align: center; /* 文本居中 */
+    font-weight: bold; /* 加粗字體 */
+    font-size: 20px; /* 放大字體 */
+}

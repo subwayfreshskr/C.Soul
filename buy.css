@@ -1,0 +1,143 @@
+body{
+    background-color: #ffffff;
+    overflow: hidden;
+}
+header {
+    border-bottom: 1px solid #efefef;
+    background-color:rgba(255, 255, 255);
+    height:103px;
+    width:100%;
+    position:fixed;  
+    top: 0; /* Set the header to the top of the viewport */
+    left: 0;
+    z-index: 999   
+   
+}
+
+.logo {
+    width: 200px; /* Adjust the width of the logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 20px; 
+    margin-top: 4px;/* Adjust the left margin to create space between the logo and other content */
+    display: flex;
+    align-items: center; /* Vertically align the image and other content */
+}
+
+header ul {
+    position:absolute;
+    right:5vw;
+    top:2vw;
+    line-height:80px;
+}
+header li {
+    display:inline;
+    margin-right:4vw;    
+}
+header a {
+    color:rgb(0, 0, 0);
+    text-decoration: none;
+}
+.about-link img {
+    margin-right: 10px; /* 在 img 右边添加 10px 的外边距 */
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:25px;
+    margin-top: 25px;
+    min-height: 100vh;
+    background: linear-gradient(90deg, #ffffff 60%, #ffffff 40.1%);
+  }
+  
+  .container form{
+    padding:20px;
+    width:700px;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+    border-radius: 10px
+  }
+  
+  .container form .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap:15px;
+    border-radius: 10px
+  }
+  
+  .container form .row .col{
+    flex:1 1 250px;
+    border-radius: 10px
+  }
+  
+  .container form .row .col .title{
+    font-size: 20px;
+    color:#333;
+    padding-bottom: 5px;
+  }
+  
+  .container form .row .col .inputBox{
+    margin:20px 10px;
+    border-radius: 10px
+  }
+  
+  .container form .row .col .inputBox span{
+    margin-bottom: 10px;
+    display: block;
+    border-radius: 10px
+  }
+  
+  .container form .row .col .inputBox input{
+    width: 100%;
+    border:1px solid #ccc;
+    padding:12px 5px;
+    font-size: 15px;
+    text-transform: none;
+    border-radius: 10px
+  }
+  
+  .container form .row .col .flex{
+    display: flex;
+    gap:20px;
+    border-radius: 10px
+  }
+  
+  .container form .row .col .flex .inputBox{
+    margin-top: 5px;
+    border-radius: 10px
+  }
+  
+  .container form .row .col .inputBox img{
+    height: 34px;
+    margin-top: 5px;
+    border-radius: 10px
+  }
+  .inputBox img {
+    height: 34px;
+    margin-right: 12px; /* 调整图像之间的距离 */
+    margin-top: 5px;
+}
+  
+  .container form .submit-btn{
+    width: 100%;
+    padding:12px;
+    font-size: 17px;
+    background: #000000;
+    color:#fff;
+    margin-top: 5px;
+    cursor: pointer;
+    border-radius: 10px
+  }
+  
+  .container form .submit-btn:hover{
+    background: #9c9c9c;
+  }
+  .container .left-image {
+    flex: 1; /* 占据左侧空间 */
+    margin-right: 20px; /* 右侧留出一些间距 */
+}
+
+.container .left-image img {
+    max-width: 100%;
+    height: auto;
+}
