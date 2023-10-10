@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C.Soul</title>
+    <link rel="stylesheet" href="on.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <img src="pic/logo.png" alt="Logo" class="logo">
+        <nav>
+        <ul>
+            <li><a href="index.html" class="about-link"> 首頁</a></li>
+            <li><a href="hoodle.html" class="about-link"> 帽踢</a></li>
+            <li><a href="hoodle.html" class="about-link"> 短袖</a></li>
+            <li><a href="hoodle.html" class="about-link"> 襯衫</a></li>    
+            <li><a href="hoodle.html" class="about-link"> 外套</a></li>            
+        </ul>
+        </nav>  
+        </div>
+        </header> 
+        <label class="left-side">
+            <div class="square" id="image-container">
+            </div>
+            <input type="file" id="image-input" accept="image/*">
+            <button class="add-button">加入圖片</button>
+        </label>
+        <div class="right-side">
+            <div class="input-container">
+                <label for="height">身高：</label>
+                <input type="number" id="height" name="height" required>
+            </div>
+            <div class="input-container">
+                <label for="weight">體重：</label>
+                <input type="number" id="weight" name="weight" required>
+            </div>
+            <div class="input-container">
+                <label for="age">年齡：</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <div class="input-container">
+                <label for="gender">性別：</label>
+                <select id="gender" name="gender">
+                    <option value="male">男性</option>
+                    <option value="female">女性</option>
+                    <option value="other">其他</option>
+                </select>
+            </div>
+            <div class="button-container">
+                <button class="black-button" onclick="redirectToResults()">檢視結果</button>
+            </div>
+        </div>
+        <script>
+            function redirectToResults() {
+        window.location.href = 'resultbrh.html';
+    }
+            const addButton = document.querySelector('.add-button');
+            const imageInput = document.getElementById('image-input');
+            const imageContainer = document.getElementById('image-container');
+        
+            addButton.addEventListener('click', () => {
+                imageInput.click();
+            });
+            imageInput.addEventListener('change', (event) => {
+                const file = event.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = (e) => {
+                        imageContainer.style.backgroundImage = `url(${e.target.result})`;
+                        addButton.style.display = 'none'; 
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+        </script>
+        
+    </body>
+    </html>
