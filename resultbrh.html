@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C.Soul</title>
+    <link rel="stylesheet" href="resultbrh.css">
+</head>
+<body>
+    <header>
+        <img src="pic/logo.png" alt="Logo" class="logo">
+        <nav>
+        <ul>
+            <li><a href="index.html" class="about-link"> 首頁</a></li>
+            <li><a href="hoodle.html" class="about-link"> 帽踢</a></li>
+            <li><a href="hoodle.html" class="about-link"> 短袖</a></li>
+            <li><a href="hoodle.html" class="about-link"> 襯衫</a></li>    
+            <li><a href="hoodle.html" class="about-link"> 外套</a></li>            
+        </ul>
+        </nav>  
+        </div>
+        </header> 
+        <label class="left-side">
+            <div class="square" id="image-container">
+                <img src="pic/brhb.jpg" alt="Your Image">
+            </div>
+        </label>
+        <div class="right-side">
+            <div class="input-container">
+                <label for="height">身高：</label>
+                <input type="number" id="height" name="height" required disabled value="172">
+            </div>
+            <div class="input-container">
+                <label for="weight">體重：</label>
+                <input type="number" id="height" name="height" required disabled value="65">
+            </div>
+            <div class="input-container">
+                <label for="age">年齡：</label>
+                <input type="number" id="height" name="height" required disabled value="23">
+            </div>
+            <div class="input-container">
+                <label>性別：</label>
+                <input type="text" id="gender" name="gender" disabled value="男性">
+            </div>
+            <div class="input-container">
+                <button class="size-button" id="size-s">S</button>
+                <button class="size-button" id="size-m">M</button>
+                <button class="size-button" id="size-l">L</button>
+                <button class="size-button" id="size-xl">XL</button>
+            </div>
+            <div class="fit-text">*適合您的尺寸</div>
+            <div class="button-container">
+                <button class="black-button" onclick="redirectToResults()">直接購買</button>
+            </div>      
+            <script>
+                       function redirectToResults() {
+        window.location.href = 'buy.html';
+    }
+                 const sizeButtons = document.querySelectorAll('.size-button');
+        sizeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // 移除所有按钮的 active 类
+                sizeButtons.forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                // 添加当前点击按钮的 active 类
+                button.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

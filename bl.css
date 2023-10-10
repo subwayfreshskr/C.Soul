@@ -1,0 +1,227 @@
+body{
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+header {
+  border-bottom: 1px solid #efefef;
+    background-color:rgba(255, 255, 255);
+    height:103px;
+    width:100%;
+    position:fixed;  
+    top: 0; /* Set the header to the top of the viewport */
+    left: 0;
+    z-index: 999   
+}
+
+.logo {
+    width: 200px; /* Adjust the width of the logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 20px; 
+    margin-top: 4px;/* Adjust the left margin to create space between the logo and other content */
+    display: flex;
+    align-items: center; /* Vertically align the image and other content */
+}
+
+header ul {
+    position:absolute;
+    right:5vw;
+    top:2vw;
+    line-height:80px;
+}
+header li {
+    display:inline;
+    margin-right:4vw;    
+}
+header a {
+    color:rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    display: flex;
+  }
+  
+  /* Columns */
+  .left-column {
+    width: 65%;
+    position: relative;
+  }
+  
+  .right-column {
+    width: 35%;
+    margin-top: 60px;
+  }
+  
+  
+  /* Left Column */
+  .left-column img {
+    width: 80%;
+    position: absolute;
+    left: 0;
+    top: 65px;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  
+  .left-column img.active {
+    opacity: 1;
+  }
+  
+  
+  /* Right Column */
+  
+  /* Product Description */
+  .product-description {
+    margin-top: 6vw;
+  }
+  .product-description span {
+    font-size: 12px;
+    color: #000000;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .product-description h1 {
+    font-weight: 300;
+    font-size: 52px;
+    color: #43484D;
+  }
+  .product-description p {
+    font-size: 16px;
+    font-weight: 300;
+    font-size: medium;
+    color: #86939E;
+  }
+  
+  /* Product Configuration */
+  .product-color span,
+  .cable-config span {
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000;
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+  
+  /* Product Color */
+  .product-color {
+    margin-bottom: 30px;
+  }
+  
+  .color-choose div {
+    display: inline-block;
+  }
+  
+  .color-choose input[type="radio"] {
+    display: none;
+  }
+  
+  .color-choose input[type="radio"] + label span {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: -1px 4px 0 0;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  
+  .color-choose input[type="radio"] + label span {
+    border: 2px solid #FFFFFF;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.33);
+  }
+  
+  .color-choose input[type="radio"]#white + label span {
+    background-color: #000000;
+  }
+  .color-choose input[type="radio"]#blue + label span {
+    background-color: #ffdb86;
+  }
+  .color-choose input[type="radio"]#black + label span::before {
+    content: "\2714"; /* Unicode 符号 ✔️，您可以更改为其他打勾符号 */
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 50%;
+    background-color: #7aa0ff; /* 黑色按钮的背景颜色 */
+    color: #ffffff; /* 打勾符号的颜色 */
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+}
+  .color-choose input[type="radio"]#brown + label span {
+    background-color: #ffffff;
+  }
+  
+  /* Cable Configuration */
+  .cable-choose {
+    margin-bottom: 20px;
+  }
+  
+  .cable-choose button {
+    border: 2px solid #E1E8EE;
+    border-radius: 6px;
+    padding: 13px 20px;
+    font-size: 14px;
+    color: #5E6977;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all .5s;
+  }
+  
+  .cable-choose button:hover,
+  .cable-choose button:active,
+  .cable-choose button:focus {
+    border: 2px solid #86939E;
+    outline: none;
+  }
+  
+  .cable-config {
+    border-bottom: 1px solid #E1E8EE;
+    margin-bottom: 20px;
+  }
+
+  .cable-config a:before {
+    content: "?";
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 2px solid rgba(53, 142, 215, 0.5);
+    display: inline-block;
+    text-align: center;
+    line-height: 16px;
+    opacity: 0.5;
+    margin-right: 5px;
+  }
+  
+  /* Product Price */
+  .product-price {
+    display: flex;
+    align-items: center;
+  }
+  
+  .product-price span {
+    font-size: 26px;
+    font-weight: 300;
+    color: #43474D;
+    margin-right: 20px;
+  }
+  
+  .cart-btn {
+    display: inline-block;
+    background-color: #000000;
+    border-radius: 100px;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 12px 30px;
+    transition: all .5s;
+    margin-left: 15px;
+  }
+  .cart-btn:hover {
+    background-color: #5c5c5c;
+  }
